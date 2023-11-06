@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calory Calculator
+    </title>
+<script defer src="main.js"></script></head>
+
+<body>
+    <div id="app" class="d-flex">
+        <div id="sidebar">
+            <h2 class="sidebar__title">Калькулятор калорий</h2>
+            <div class="sidebar-list">
+                <p class="sidebar-list__item sidebar-list__item-main">Главная</p>
+                <p class="sidebar-list__item sidebar-list__item-ingestion">Прием пищи</p>
+                <p class="sidebar-list__item sidebar-list__item-food">Продукты</p>
+                <p class="sidebar-list__item sidebar-list__item-settings">Настройки</p>
+            </div>
+        </div>
+        <main>
+            <section id="main-screen" class="d-flex jc-center ai-center"></section>
+            <section id="ingestion-screen" class="d-none">
+
+                <div class="ingestion-screen-add">
+                    <h1 class="section-title">Прием пищи</h1>
+                    <div class="food-screen-add-product-inputs-wrapper d-flex fd-column">
+                        <div class="search-product-wrapper">
+                            <input type="text" class="add-ingestion__title add-ingestion__input"
+                                placeholder="Найти продукт">
+                            <div class="search-results d-none"></div>
+                        </div>
+                        <input type="text" class="add-ingestion__weight add-ingestion__input"
+                            placeholder="Сколько грамм">
+                        <button class="add-ignestion-btn">Добавить</button>
+                    </div>
+
+                </div>
+
+            </section>
+            <section id="food-screen" class="d-none">
+                <div class="food-screen-add-product d-flex fd-column">
+                    <h1 class="section-title">Добавить продукт</h1>
+                    <div class="food-screen-add-product-inputs-wrapper d-flex fd-column">
+                        <input type="text" class="add-product__title add-product__input"
+                            placeholder="Название продукта">
+                        <input type="text" class="add-product__calory add-product__input"
+                            placeholder="Количество калорий">
+                        <select name="category" id="category" class="add-product__category">
+                            <option value="Категория" selected="true" disabled="disabled">Категория</option>
+                            <option value="Молочные продукты">Молочные продукты</option>
+                            <option value="Фрукты, ягоды">Фрукты, ягоды</option>
+                            <option value="Зерновые, бобы">Зерновые, бобы</option>
+                            <option value="Мясные продукты">Мясные продукты</option>
+                            <option value="Кондитерские изделия">Кондитерские изделия</option>
+                            <option value="Овощи">Овощи</option>
+                            <option value="Напитки">Напитки</option>
+                        </select>
+                    </div>
+                    <button class="add-product-btn">Сохранить</button>
+                </div>
+
+            </section>
+            <section id="settings-screen" class="d-none">
+                <h1 class="section-title">Настройки</h1>
+                <button class="remove-user-btn">Удалить всю сохраненную информацию</button>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
